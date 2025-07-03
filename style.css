@@ -40,7 +40,9 @@ nav a{
 nav a:hover{
     background-color: var(--hover-color);
 }
-nav .home-link{
+.icon{
+    padding: 20px;
+    height: 60px;
     margin-right: auto;    /* change the page with imagicon */
 }
 nav svg{
@@ -52,7 +54,7 @@ nav svg{
 .open-sidebar-button, .close-sidebar-button{
     display: none;
 }
-@media(max-width: 450px){
+@media(max-width: 650px){
     .links-container{
         flex-direction: column;
         align-items: flex-start;
@@ -76,7 +78,11 @@ nav svg{
     }
     .open-sidebar-button, .close-sidebar-button{
         padding: 20px;
-        display: block;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+
     }
     #sidebar-active:checked ~ .links-container{
         right: 0;
@@ -89,5 +95,10 @@ nav svg{
         left: 0;
         z-index: 9;
     }
-    
+    .open-sidebar-button img{
+        height: 60px;
+    }
+    .icon{
+        display: none;
+    }
 }
