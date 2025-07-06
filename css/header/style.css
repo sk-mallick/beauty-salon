@@ -41,6 +41,7 @@ nav a:hover{
     background-color: var(--hover-color);
 }
 .icon{
+    box-sizing: unset;
     padding: 20px;
     height: 60px;
     margin-right: auto;    /* change the page with imagicon */
