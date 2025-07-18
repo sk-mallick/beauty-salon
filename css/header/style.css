@@ -103,3 +103,223 @@ nav svg{
         display: none;
     }
 }
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: relative;
+    background-attachment: fixed;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to top, #fff, transparent);
+}
+
+/* About Preview */
+.about-preview img {
+    transition: transform 0.3s ease;
+}
+
+.about-preview img:hover {
+    transform: scale(1.02);
+}
+
+/* Featured Services */
+.featured-services .card {
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.featured-services .card:hover {
+    transform: translateY(-5px);
+}
+
+.featured-services .card img {
+    transition: transform 0.3s ease;
+}
+
+.featured-services .card:hover img {
+    transform: scale(1.05);
+}
+
+/* Gallery Preview */
+.gallery-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item::after {
+    content: '🔍';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+/* Testimonials */
+.testimonials .card {
+    transition: transform 0.3s ease;
+}
+
+.testimonials .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Special Offers */
+.special-offers .card {
+    transition: transform 0.3s ease;
+}
+
+.special-offers .card:hover {
+    transform: translateY(-5px);
+}
+
+.special-offers .badge {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+/* CTA Banner */
+.cta-banner {
+    background: linear-gradient(45deg, var(--color-1), #272832);
+}
+
+/* Newsletter */
+.newsletter-form .form-control {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+.newsletter-form .btn {
+    padding: 0.75rem 2rem;
+}
+
+/* Social Media */
+.social-media a {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-media a:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--color-1);
+    color: var(--text-color);
+    padding: 40px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.footer-section p, .footer-section a {
+    color: #999;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: var(--text-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    color: #999;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #999;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--text-color);
+}
+
+/* Responsive Footer */
+@media (max-width: 900px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-section .btn-group {
+        justify-content: center;
+    }
+
+    .special-offers .card {
+        margin-bottom: 2rem;
+    }
+
+    .cta-banner .btn-group {
+        margin-top: 1rem;
+    }
+}
